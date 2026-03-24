@@ -1,0 +1,162 @@
+.cmp-herobanner {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 6%;
+  background: linear-gradient(135deg, #2b2d42 0%, #7b2cbf 100%);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+ 
+&__content {
+    flex: 0 0 50%;
+    max-width: 600px;
+
+  }
+ 
+  &__pretitle {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+    opacity: 0.85;
+
+  }
+ 
+  &__title {
+
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+
+  }
+ 
+  &__description {
+
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+ 
+    p {
+      margin-bottom: 16px;
+    }
+
+  }
+ 
+  &__action {
+    margin-top: 10px;
+
+  }
+ 
+  &__button {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+ 
+    &:hover {
+
+      background-color: transparent;
+      color: #ffffff;
+      border: 2px solid #ffffff;
+    }
+
+  }
+&__image {
+
+    flex: 0 0 40%;
+    text-align: right;
+ 
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+  }
+ 
+  &__caption {
+
+    margin-top: 12px;
+    font-size: 14px;
+    opacity: 0.8;
+    text-align: left;
+
+  }
+
+  @media (max-width: 1200px) {
+       &__title {
+         font-size: 52px;
+         }
+
+  }
+ 
+  @media (max-width: 992px) {
+    flex-direction: column;
+    text-align: center;
+    &__content,
+&__image {
+
+      flex: 0 0 100%;
+      max-width: 100%;
+
+    }
+ 
+    &__image {
+
+      margin-top: 40px;
+      text-align: center;
+
+    }
+ 
+    &__caption {
+
+      text-align: center;
+
+    }
+ 
+    &__title {
+
+      font-size: 42px;
+
+    }
+
+  }
+ 
+  @media (max-width: 576px) {
+
+    padding: 60px 20px;
+ 
+    &__title {
+
+      font-size: 32px;
+
+      
+    }
+ 
+    &__description {
+
+      font-size: 16px;
+
+    }
+ 
+    &__button {
+
+      padding: 12px 22px;
+
+    }
+
+  }
+
+}
+ 

@@ -1,0 +1,49 @@
+
+<div class="cmp-herobanner"
+     data-cmp-is="herobanner" >
+
+    <div class="cmp-herobanner__content">
+
+        <div class="cmp-herobanner__pretitle"
+             data-sly-test="${properties.preTitle}">
+            ${properties.preTitle}
+        </div>
+
+   
+        <h1 class="cmp-herobanner__title"
+            data-sly-test="${properties.title}">
+            ${properties.title}
+        </h1>
+      
+    
+        <div class="cmp-herobanner__description"
+             data-sly-test="${properties.description}">
+            ${properties.description @ context='html'}
+        </div>
+
+
+        <div class="cmp-herobanner__action"
+             data-sly-test="${properties.buttonText && properties.buttonLink}">
+            <a class="cmp-herobanner__button"
+               href="${properties.buttonLink}">
+                ${properties.buttonText}
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="cmp-herobanner__image"
+         data-sly-test="${properties.image}">
+
+        <img src="${properties.image}"
+             alt="${properties.imageCaption}" />
+
+        <div class="cmp-herobanner__caption"
+             data-sly-test="${properties.imageCaption}">
+            ${properties.imageCaption}
+        </div>
+
+    </div>
+
+</div>

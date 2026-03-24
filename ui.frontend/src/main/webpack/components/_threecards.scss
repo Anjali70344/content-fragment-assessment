@@ -1,0 +1,35 @@
+// .cmp-container {
+
+//   .threecards-layout {
+
+//     /* inner container becomes grid */
+//     > .cmp-container {
+      
+//       align-items: stretch;
+//     }
+
+//     /* each component column */
+//     > .cmp-container > * {
+//       display: flex; 
+//       height: 100%;
+//     }
+
+
+//   }
+
+// }
+.threecards-layout {
+
+  .cmp-container {
+    .aem-Grid.aem-Grid--12.aem-Grid--default--12 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  
+  .aem-Grid::before{
+    content: unset;
+  }
+  }
+
+}

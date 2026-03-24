@@ -1,0 +1,129 @@
+.two-column-layout {
+
+   .cmp-teaser {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: $color-accent;
+    border-radius: 12px;
+    box-shadow: $color-foreground;
+    overflow: hidden;
+
+    &__image {
+      height: 220px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      padding: 16px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+
+      &__title {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+
+      &__description {
+        font-size: 15px;
+        line-height: 1.5;
+        flex-grow: 1;
+      }
+    }
+  }
+}
+
+
+
+/* teaser style policy for assesment - 2 */
+.cmp-teaser {
+
+  &__banner-bg-black {
+
+    position: relative;
+
+    .cmp-teaser__content {
+      position: absolute;
+      top: 50%;
+      left: 80px;
+      transform: translateY(-50%);
+      background: $color-muted;
+      padding: 40px;
+      max-width: 520px;
+      color: $color-background;
+    }
+
+    .cmp-teaser__title {
+      font-size: 40px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+
+    .cmp-teaser__image img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
+    .cmp-teaser__description {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+  }
+
+}
+
+
+/* teaser style policy for assesment - 1 */
+
+.cmp-teaser {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: start;
+
+  &__teaser-image-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__image {
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+
+      margin-bottom: 16px;
+    }
+
+
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+  }
+}

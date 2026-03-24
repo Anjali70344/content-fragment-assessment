@@ -1,0 +1,23 @@
+<div class="cmp-headcomponent"
+     data-cmp-is="headcomponent"
+     data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HeadComponentModel">
+
+    <h1 class="cmp-headcomponent__title">${model.title}</h1>
+
+    <div class="cmp-headcomponent__item" data-sly-test="${properties.description}">
+        <p class="cmp-headcomponent__item-label">Description property:</p>
+        <pre class="cmp-headcomponent__item-output"
+             data-cmp-hook-headcomponent="property">
+            ${properties.description}
+        </pre>
+    </div>
+
+    <div class="cmp-headcomponent__item" data-sly-test="${model.description}">
+        <p class="cmp-headcomponent__item-label">Sling Model getDescription() property:</p>
+        <pre class="cmp-headcomponent__item-output"
+             data-cmp-hook-headcomponent="model">
+            ${model.description}
+        </pre>
+    </div>
+
+</div>
