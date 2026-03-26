@@ -1,0 +1,22 @@
+<div class="feature-component"
+     data-sly-use.model="com.adobe.aem.guides.wknd.core.models.FeatureListComponentModel">
+
+    <div data-sly-test="${model.items && model.items.size > 0}">
+        <div class="feature-item"
+             data-sly-list.feature="${model.items}">
+
+            <h3>${feature.title}</h3>
+
+            <p data-sly-test="${feature.description}">
+                ${feature.description}
+            </p>
+
+            <a data-sly-test="${feature.link}"
+               href="${feature.link}">
+                Read more
+            </a>
+
+        </div>
+    </div>
+
+</div>
