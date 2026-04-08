@@ -5,6 +5,7 @@
     "use strict";
 
     var SERVLET_URL = "/bin/wknd/cf-data.json";
+    var LEARN_MORE_URL = "https://www.google.com";
 
     // Best practice:
     // For a good separation of concerns, don't rely on CSS-only selectors,
@@ -50,7 +51,7 @@
         <div class="cf-card__body">
             <h2 class="cf-card__title">${card.title || ""}</h2>
             <p class="cf-card__desc">${card.description || ""}</p>
-            <a class="cf-card__btn" href="${card.redirectPageUrl || "#"}">Learn More</a>
+            <a class="cf-card__btn" href="${LEARN_MORE_URL}">Learn More</a>
         </div>
     </div>
 </li>
