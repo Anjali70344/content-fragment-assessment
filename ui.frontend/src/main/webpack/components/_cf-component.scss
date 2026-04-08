@@ -1,0 +1,137 @@
+.cf-card-container {
+    width: min(1200px, calc(100% - 2rem));
+    margin: 2rem auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+// List/Grid
+.cf-card__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.cardFeature {
+    min-width: 0;
+}
+//Loader
+.cf-loader {
+    text-align: center;
+    padding: 2rem;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+// Error
+.cf-error {
+    margin-bottom: 1rem;
+    padding: 12px 16px;
+    background: #fff3f3;
+    border-left: 4px solid #d32f2f;
+    color: #b71c1c;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+//Card 
+.cf-card {
+    height: 100%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cf-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+// Image
+.cf-card__img-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #ebebeb;
+    overflow: hidden;
+}
+
+.cf-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+//Body 
+.cf-card__body {
+    padding: 1.1rem 1.1rem 1.2rem;
+}
+
+.cf-card__title {
+    margin: 0 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.3;
+}
+
+.cf-card__desc {
+    margin: 0 0 1rem;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+// CTA Button 
+.cf-card__btn {
+    display: inline-block;
+    padding: 9px 20px;
+    background: #0265dc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.cf-card__btn:hover {
+    background: #0253b3;
+    color: #fff;
+}
+
+.cf-card__btn--hidden {
+    display: none;
+}
+
+//Tablet
+@media (min-width: 640px) {
+    .cf-card__list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+
+    .cf-card__body {
+        padding: 1.2rem 1.25rem 1.25rem;
+    }
+}
+
+// Desktop 
+@media (min-width: 1024px) {
+    .cf-card__list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .cf-card__title {
+        font-size: 1.2rem;
+    }
+
+    .cf-card__desc {
+        font-size: 0.95rem;
+    }
+}

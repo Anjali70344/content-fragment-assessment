@@ -1,0 +1,22 @@
+<!-- CF Card Component - fetches data from ContentFragmentServlet -->
+<!--/* //Rendering a Content Fragment (CF) card list
+// Using data-* attributes as JS hooks
+// Expecting JavaScript to: i. Fetch data (from a servlet) ii.Update UI (loader, error, list) */-->
+
+<div class="cf-card-container" data-cmp-is="cfcomponent">
+
+    <!-- Loading state -->
+    <div id="cfLoader" class="cf-loader" data-cmp-hook-cf="loader">Loading...</div>
+
+    <!-- Error state -->
+    <div id="cfError" class="cf-error" data-cmp-hook-cf="error" style="display:none;"></div>
+
+    <ul class="cf-card__list" data-cmp-hook-cf="list"></ul>
+
+</div>
+
+
+   
+
+
+
