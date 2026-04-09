@@ -51,7 +51,7 @@
         <div class="cf-card__body">
             <h2 class="cf-card__title">${card.title || ""}</h2>
             <p class="cf-card__desc">${card.description || ""}</p>
-            <a class="cf-card__btn" href="${LEARN_MORE_URL}">Learn More</a>
+            <a class="cf-card__btn" href="${card.redirectPageUrl || "#"}">Learn More</a>
         </div>
     </div>
 </li>
