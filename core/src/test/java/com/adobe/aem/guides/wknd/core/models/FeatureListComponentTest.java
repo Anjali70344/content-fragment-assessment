@@ -86,13 +86,13 @@ class FeatureListComponentTest {
 
         //Verify model correctly reads data
         
-        Resource testResource = context.create().resource(page, "missingProps",
+        Resource testResources = context.create().resource(page, "missingProps",
                 "sling:resourceType", "wknd/components/featurelist");
 
-        context.create().resource(testResource, "features/item0");
+        context.create().resource(testResources, "features/item0");
 
         FeatureListComponentModel testModel =
-                testResource.adaptTo(FeatureListComponentModel.class);
+                testResources.adaptTo(FeatureListComponentModel.class);
 
         List<FeatureListComponentModel.Item> items = testModel.getItems();
 
