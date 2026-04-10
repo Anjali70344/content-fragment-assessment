@@ -27,6 +27,8 @@ class ContentFragmentServletTest {
     private final ContentFragmentServlet fixture = new ContentFragmentServlet();
     private final ObjectMapper objectMapper = new ObjectMapper();
 
+
+    //Confirms the guard clause works when the configured folder path does not exist
     @Test
     void doGetReturnsErrorWhenFolderMissing(AemContext context) throws ServletException, IOException {
 	MockSlingHttpServletRequest request = context.request();
@@ -38,6 +40,8 @@ class ContentFragmentServletTest {
 	assertEquals("{\"error\":\"CF folder not found\"}", response.getOutputAsString());
     }
 
+
+    //Valid content fragment returns mapped data
     @Test
     void doGetReturnsFragmentData(AemContext context) throws Exception {
 	context.build()
@@ -74,6 +78,8 @@ class ContentFragmentServletTest {
 	assertEquals("/content/wknd/us/en/feature", first.get("redirectPageUrl"));
     }
 
+
+    //Skips invalid children and applies empty-string defaults
     @Test
     void doGetSkipsJcrContentAndMissingDataNodes(AemContext context) throws Exception {
 	context.build()
